@@ -15,7 +15,7 @@
     <div class="dashboard-container">
         <nav class="sidebar">
             <div class="logo">
-                <h2>EduFlow Admin</h2>
+                <h2>EduFlow</h2>
             </div>
             <ul class="nav-links">
                 <li><a href="dashboard.jsp" class="active"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
