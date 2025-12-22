@@ -6,13 +6,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Login | EduFlow</title>
+<title>Teacher Login | EduFlow</title>
 <link rel="stylesheet" href="../style/auth.css">
 </head>
 <body>
 	<div class="container">
 		<form action="" method="post">
-			<h2>Student Login</h2>
+			<h2>Teacher Login</h2>
 			<input type="text" placeholder="E-mail" name="email">
 			<input type="password" name="pass" id="" placeholder="*************">
 			<input type="submit" value="Submit">
