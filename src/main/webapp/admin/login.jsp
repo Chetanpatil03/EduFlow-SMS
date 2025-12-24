@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="container">
-		<form action="" method="post">
+		<form action="<%=request.getContextPath()%>/AdminLogin" method="post">
 			<h2>Login</h2>
 			<input type="text" placeholder="Username or E-mail" name="username">
 			<input type="password" name="pass" id="" placeholder="*************">
