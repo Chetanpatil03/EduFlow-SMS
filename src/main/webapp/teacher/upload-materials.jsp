@@ -1,0 +1,104 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Materials | EduFlow</title>
+    <link rel="stylesheet" href="../style/dashboard-style.css?v=1.4">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="logo"><h2>Edu<span>Flow</span></h2></div>
+            <ul class="nav-links">
+                <li><a href="teacher-dashboard.jsp"><i class='bx bxs-dashboard'></i> Dashboard</a></li>
+                <li><a href="view-announcements.jsp"><i class='bx bxs-megaphone'></i> Announcements</a></li>
+                <li><a href="mark-attendance.jsp"><i class='bx bxs-calendar-check'></i> Attendance</a></li>
+                <li><a href="manage-marks.jsp" ><i class='bx bxs-edit-location'></i> Marks</a></li>
+                <li><a href="upload-materials.jsp" class="active"><i class='bx bxs-file-pdf'></i> Materials</a></li>
+                <li class="logout"><a href="${pageContext.request.contextPath}/Logout"><i class='bx bxs-log-out'></i> Logout</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <header>
+                <div class="header-title">
+                    <h1>Course Resources</h1>
+                    <p>Upload and manage study materials for your students</p>
+                </div>
+                <button class="btn-add-main" onclick="openUploadModal()">
+                    <i class='bx bx-upload'></i> New Upload
+                </button>
+            </header>
+
+            <section class="table-container">
+                <div class="table-header-flex" style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <h2>Uploaded Documents</h2>
+                    <div class="search-box" style="max-width: 300px;">
+                        <i class='bx bx-search'></i>
+                        <input type="text" placeholder="Search files...">
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>File Name</th>
+                            <th>Course</th>
+                            <th>Upload Date</th>
+                            <th>Type</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Unit 1 - Introduction to Java</td>
+                            <td>CS-101</td>
+                            <td>24 Dec 2025</td>
+                            <td><span class="status-tag holiday">PDF</span></td>
+                            <td>
+                                <button class="btn-view" title="Download"><i class='bx bx-download'></i></button>
+                                <button class="btn-delete-action" title="Delete"><i class='bx bx-trash'></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <div id="uploadModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Upload Study Material</h2>
+                <span class="close-btn" onclick="closeUploadModal()">&times;</span>
+            </div>
+            <form action="UploadMaterialServlet" method="POST" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label>Material Title</label>
+                    <input type="text" name="title" placeholder="e.g. Week 4 Lecture Notes" required>
+                </div>
+                <div class="input-group">
+                    <label>Select Course</label>
+                    <select name="courseID">
+                        <option value="CS101">Computer Science (CS-101)</option>
+                        <option value="IT202">Information Tech (IT-202)</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>Select File</label>
+                    <input type="file" name="file" accept=".pdf,.ppt,.pptx,.doc,.docx" required>
+                </div>
+                <button type="submit" class="btn-submit">Start Upload</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openUploadModal() { document.getElementById("uploadModal").style.display = "block"; }
+        function closeUploadModal() { document.getElementById("uploadModal").style.display = "none"; }
+    </script>
+</body>
+</html>
