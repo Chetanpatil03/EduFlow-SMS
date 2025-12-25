@@ -15,7 +15,7 @@ import jakarta.persistence.Id;
 class Student{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long stud_id;
+	private long stud_id; 
 	
 	private long roll;
 	private String name;
