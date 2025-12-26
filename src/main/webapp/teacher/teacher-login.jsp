@@ -11,7 +11,7 @@
 </head>
 <body>
 	<div class="container">
-		<form action="" method="post">
+		<form action="<%=request.getContextPath()%>/TeacherLogin" method="post">
 			<h2>Teacher Login</h2>
 			<input type="text" placeholder="E-mail" name="email">
 			<input type="password" name="pass" id="" placeholder="*************">
