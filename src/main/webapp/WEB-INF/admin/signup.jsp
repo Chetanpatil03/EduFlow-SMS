@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup | EduFlow</title>
-	<link rel="stylesheet" href="../style/auth.css">
+	<link rel="stylesheet" href="<%=request.getContextPath()%>/style/auth.css">
 	</head>
 <body>
     <div class="container">
@@ -17,7 +17,7 @@
             <input type="text" name="name" id=""placeholder = "Full Name">
             <input type="password" name="pass" id="" placeholder="*********">
             <textarea name="address" id="" placeholder="Address"></textarea>
-            <p>Already have an account ? Login <a href="login.jsp">here.</a></p>
+            <p>Already have an account ? Login <a href="<%=request.getContextPath()%>/admin/login.jsp">here.</a></p>
             <input type="submit" value="Signup">
         </form>
     </div>

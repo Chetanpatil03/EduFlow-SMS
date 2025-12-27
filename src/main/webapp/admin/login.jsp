@@ -16,7 +16,7 @@
 			<input type="text" placeholder="Username or E-mail" name="username">
 			<input type="password" name="pass" id="" placeholder="*************">
 			<p>
-				Don't have an account ? create <a href="signup.jsp">here.</a>
+				Don't have an account ? create <a href="<%=request.getContextPath()%>/AdminSignupServlet">here.</a>
 			</p>
 			<input type="submit" value="Submit">
 		</form>

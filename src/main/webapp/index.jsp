@@ -40,7 +40,7 @@
                 <p>Manage users, departments, and system-wide configurations.</p>
                 <div class="action-links">
                     <a href="./admin/login.jsp" class="btn-portal">Login</a>
-                    <a href="./admin/signup.jsp" class="link-secondary">Register Admin</a>
+                    <a href="<%=request.getContextPath()%>/AdminSignupServlet" class="link-secondary">Register Admin</a>
                 </div>
             </div>
 
