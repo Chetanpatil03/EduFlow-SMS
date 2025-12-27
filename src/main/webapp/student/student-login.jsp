@@ -15,7 +15,8 @@
 			<h2>Student Login</h2>
 			<input type="text" placeholder="E-mail" name="email">
 			<input type="password" name="pass" id="" placeholder="*************">
-			<input type="submit" value="Submit">
+			<p>Note : If your are new your password will be your email.</p>
+			<input type="submit" value="Login">
 		</form>
 	</div>
 </body>

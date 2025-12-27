@@ -18,7 +18,7 @@
 			<p>
 				Don't have an account ? create <a href="<%=request.getContextPath()%>/AdminSignupServlet">here.</a>
 			</p>
-			<input type="submit" value="Submit">
+			<input type="submit" value="Login">
 		</form>
 	</div>
 </body>
