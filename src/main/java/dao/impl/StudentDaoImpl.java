@@ -27,10 +27,11 @@ public class StudentDaoImpl implements StudentDao{
 		// TODO Auto-generated method stub
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Query<Student> query = session.createQuery("from student where email = :email",Student.class);
-		session.close();
+		query.setParameter("email", email);
+		
+		
 		Student student = query.uniqueResult();
 		session.close();
-		
 		return student;
 	}
 
@@ -69,7 +70,7 @@ public class StudentDaoImpl implements StudentDao{
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction trx = session.beginTransaction();
 		
-		Query query = session.createQuery("update student set status = :status where id = :id",Student.class);
+		Query<Student> query = session.createQuery("update student set status = :status where id = :id",Student.class);
 		
 		query.setParameter("status", status);
         query.setParameter("id", stud_id);
