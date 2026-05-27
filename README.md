@@ -74,7 +74,7 @@ EduFlow-SMS
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/EduFlow-SMS.git
+   git clone https://github.com/chetanpatil45/EduFlow-SMS.git
   ``
 
 2. **Import project**
@@ -118,4 +118,5 @@ EduFlow-SMS
 
 ## 👨‍💻 Author
 
-**Chetan Patil**
+**Chetan Patil**<br>
+Java Developer | Student
