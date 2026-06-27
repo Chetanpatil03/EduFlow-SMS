@@ -12,7 +12,7 @@ The system provides role-based access and a user-friendly web interface for smoo
 - Manage teachers (add, update, view)
 - Manage students
 - Dashboard with side navigation menu
-- System configuration and monitoring
+- System confguration and monitoring
 
 ### 👨‍🏫 Teacher Module
 - Teacher login
